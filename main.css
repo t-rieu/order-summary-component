@@ -1,0 +1,61 @@
+html {
+    /* background-image: url(images/pattern-background-mobile.svg); */
+    background-color: rgb(172, 172, 255);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    font-size: 16px;
+}
+
+.card {
+    background-color: hsl(225, 100%, 98%);
+}
+
+h1 {
+    font-size: 23px;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    /* letter-spacing: 0.5px; */
+}
+.card::before { /*or h1? */
+    content:'';
+    display: block;
+    background-image: url(images/illustration-hero.svg);
+    background-size: 100%;
+    height: 200px; /* fix */
+    width: 100%;
+}
+
+.plan-description {
+    color: hsl(224, 23%, 55%); /* this is not the right color */
+}
+
+.plan-choice::before {
+    content:'';
+    display: inline-block;
+    background-image: url(images/icon-music.svg); /*another way instead of background image? */
+    background-size: 50px;
+    width: 100%;
+    height: 100px; /* fix */
+    background-repeat: no-repeat;   
+}
+
+.proceed-payment-button { 
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.cancel-order {
+    display: block;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+}
