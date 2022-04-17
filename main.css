@@ -1,16 +1,24 @@
 html {
     /* background-image: url(images/pattern-background-mobile.svg); */
     background-color: rgb(172, 172, 255);
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Red Hat Display', sans-serif;
     text-align: center;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .card {
     background-color: hsl(225, 100%, 98%);
+    /* width: 100%; */
+    /* margin: 0 15px; */
 }
 
 h1 {
@@ -23,32 +31,42 @@ h1 {
     content:'';
     display: block;
     background-image: url(images/illustration-hero.svg);
-    background-size: 100%;
-    height: 200px; /* fix */
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    height: 200px;
     width: 100%;
 }
 
-.plan-description {
+.plan-description, .cancel-order {
     color: hsl(224, 23%, 55%); /* this is not the right color */
 }
 
-.plan-choice::before {
+/* .plan-choice::before {
     content:'';
     display: inline-block;
-    background-image: url(images/icon-music.svg); /*another way instead of background image? */
+    background-image: url(images/icon-music.svg); another way instead of background image? 
     background-size: 50px;
     width: 100%;
-    height: 100px; /* fix */
+    height: 100px; /* fix 
     background-repeat: no-repeat;   
-}
+} */
 
 .proceed-payment-button { 
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid hsl(245, 75%, 52%);
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 94%);
+    padding: 10px 70px; /*this needs to be relative */
+    margin: 1em;
+    border-radius: 10px;
+    /* there is a box shadow */
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .cancel-order {
     display: block;
+    font-weight: 700;
 }
 
 .attribution {
