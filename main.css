@@ -17,8 +17,9 @@ body {
 
 .card {
     background-color: hsl(225, 100%, 98%);
-    /* width: 100%; */
+    width: 400px; /*width is too big for mobile screen size */
     /* margin: 0 15px; */
+    /* padding: 30px; */
 }
 
 h1 {
@@ -27,33 +28,64 @@ h1 {
     color: hsl(223, 47%, 23%);
     /* letter-spacing: 0.5px; */
 }
+
 .card::before { /*or h1? */
     content:'';
     display: block;
     background-image: url(images/illustration-hero.svg);
-    /* background-size: 100%; */
+    background-size: 100%;
     background-repeat: no-repeat;
     height: 200px;
-    width: 100%;
+    /* width: 100%; */
+    margin-bottom: 35px;
+}
+
+.plan-description {
+    font-weight: 500;
+    line-height: 2;
+    padding: 0 30px;
 }
 
 .plan-description, .cancel-order {
     color: hsl(224, 23%, 55%); /* this is not the right color */
 }
 
-/* .plan-choice::before {
+.plan-choice::before {
     content:'';
     display: inline-block;
-    background-image: url(images/icon-music.svg); another way instead of background image? 
+    background-image: url(images/icon-music.svg); /*another way instead of background image? */
     background-size: 50px;
-    width: 100%;
-    height: 100px; /* fix 
+    width: 50px;
+    height: 50px;
     background-repeat: no-repeat;   
-} */
+    position: absolute;
+    left: 50px;
+}
+
+.plan-choice {
+    /* background-color: hsl(225, 100%, 94%);  */
+    position: relative;   
+}
+
+.plan-type {
+    color: hsl(223, 47%, 23%);
+    font-weight: 700;
+}
+
+.plan-price {
+    display: block;
+    color: hsl(224, 23%, 55%); 
+}
+
+.change-plan {
+    position: absolute;
+    right: 70px;
+    bottom: 15px;
+}
 
 .proceed-payment-button { 
     display: inline-block;
-    border: 1px solid hsl(245, 75%, 52%);
+    /* border: 1px solid hsl(245, 75%, 52%); */
     background-color: hsl(245, 75%, 52%);
     color: hsl(225, 100%, 94%);
     padding: 10px 70px; /*this needs to be relative */
@@ -64,9 +96,21 @@ h1 {
     letter-spacing: 1px;
 }
 
+/* .proceed-payment-button:hover {
+    background-color: hsl(245, 75%, 52%);
+} */
+
 .cancel-order {
     display: block;
     font-weight: 700;
+}
+
+.cancel-order:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+a.proceed-payment-button, a.cancel-order {
+    text-decoration: none;
 }
 
 .attribution {
@@ -77,3 +121,9 @@ h1 {
   .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/* @media (min-width: 1400px) {
+    body {
+        width: 120px;
+    }
+} */
