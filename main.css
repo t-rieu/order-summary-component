@@ -18,8 +18,11 @@ body {
 .card {
     background-color: hsl(225, 100%, 98%);
     width: 400px; /*width is too big for mobile screen size */
-    /* margin: 0 15px; */
+    /* margin: 20px; */
     /* padding: 0 30px; */
+    padding-bottom: 35px;
+    border-radius: 20px;
+    /* box-shadow: 0px 3px 3px 3px hsl(223, 47%, 23%); */
 }
 
 h1 {
@@ -38,6 +41,7 @@ h1 {
     height: 200px;
     /* width: 100%; */
     margin-bottom: 35px;
+    border-radius: 20px 20px 0 0;
 }
 
 .plan-description {
@@ -47,10 +51,10 @@ h1 {
 }
 
 .plan-description, .cancel-order {
-    color: hsl(224, 23%, 55%); /* this is not the right color */
+    color: hsl(224, 23%, 55%); 
 }
 
-.plan-choice::before {
+.plan-choice article::before {
     content:'';
     display: inline-block;
     background-image: url(images/icon-music.svg); /*another way instead of background image? */
@@ -58,51 +62,58 @@ h1 {
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;   
-    /* position: absolute;
-    left: -50px;
-    bottom: -50px; */
 }
 
 .plan-choice {
-    /* background-color: hsl(225, 100%, 94%);  */
+    background-color: hsl(225, 100%, 94%); 
+    width: 90%;
     position: relative;   
-    /* display: flex; */
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+/* .plan-choice article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .plan-type {
     color: hsl(223, 47%, 23%);
     font-weight: 700;
     margin: 0;
+    font-size: 16px;
 }
 
 .plan-price {
     color: hsl(224, 23%, 55%); 
     margin: 0;
-    /* text-align: left; */
 }
 
-/* .change-plan {
-    position: absolute;
-    right: 70px;
-    bottom: 15px;
-} */
+.change-plan {
+    color: hsl(245, 75%, 52%);
+}
 
 .proceed-payment-button { 
     display: inline-block;
     /* border: 1px solid hsl(245, 75%, 52%); */
     background-color: hsl(245, 75%, 52%);
     color: hsl(225, 100%, 94%);
-    padding: 10px 70px; /*this needs to be relative */
+    padding: 15px 70px; /*this needs to be relative */
     margin: 1em;
     border-radius: 10px;
-    /* there is a box shadow */
+    box-shadow: 0 10px 10px 1px hsla(245, 75%, 52%, 0.219); 
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* .proceed-payment-button:hover {
-    background-color: hsl(245, 75%, 52%);
-} */
+.proceed-payment-button:hover, .change-plan:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
 
 .cancel-order {
     display: block;
