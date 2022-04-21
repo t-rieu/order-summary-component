@@ -17,7 +17,7 @@ body {
 
 .card {
     background-color: hsl(225, 100%, 98%);
-    width: 400px; /*width is too big for mobile screen size */
+    /* width: 400px; width is too big for mobile screen size */
     /* margin: 20px; */
     /* padding: 0 30px; */
     padding-bottom: 35px;
@@ -36,7 +36,8 @@ h1 {
     content:'';
     display: block;
     background-image: url(images/illustration-hero.svg);
-    background-size: 100%;
+    /* background-size: 100%; */
+    background-size: contain;
     background-repeat: no-repeat;
     height: 200px;
     /* width: 100%; */
@@ -75,11 +76,21 @@ h1 {
     justify-content: space-between;
 }
 
-/* .plan-choice article {
+.plan-choice article {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* .plan-choice article h2, .plan-choice article p{
+    display: flex;
+    flex-direction: column;
+    
 } */
+
+.plan-choice article h2 {
+    display: block;
+}
 
 .plan-type {
     color: hsl(223, 47%, 23%);
